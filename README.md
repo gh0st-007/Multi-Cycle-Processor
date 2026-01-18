@@ -57,4 +57,4 @@ The following value is expected in memory:
 Mem[0x400] = 20
 
 Here are the waveforms: 
-![Waveforms](Multi_Cycle_waveform.png)
+![Waveforms](Multi_cycle_waveform.png)
