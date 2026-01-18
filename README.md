@@ -35,26 +35,26 @@ sw x2, 0(x1)          # Mem[0x400] = 20
 lw x3, 0(x1)          # x3 = Mem[0x400] = 20  
 
 # Branch  
-beq x2, x3, skip       # if x2 == x3 jump
-addi x4, x0, 0         # should be skipped
-skip:  
-addi x4, x0, 99        # x4 = 99
+beq x2, x3, skip         # if x2 == x3 jump
+addi x4, x0, 0           # should be skipped
+skip:    
+addi x4, x0, 99          # x4 = 99
 
 # Jump and link  
-jal x5, next           # x5 = PC+4, jump to next
-addi x0, x0, 0         # will be skipped
-next:  
-addi x6, x0, 42        # x6 = 42
+jal x5, next             # x5 = PC+4, jump to next  
+addi x0, x0, 0           # will be skipped  
+next:    
+addi x6, x0, 42        # x6 = 42  
 
-Upon successful operation of the above program, the following values are expected in the given registers:   
-x1 -> 0x1000
-x2 -> 0x14
-x3 -> 0x14
-x4 -> 0x63
-x5 -> 0x44
-x6 -> 0x2A
-The following value is expected in memory:
-Mem[0x400] = 20
+Upon successful operation of the above program, the following values are expected in the given registers:     
+x1 -> 0x1000  
+x2 -> 0x14  
+x3 -> 0x14  
+x4 -> 0x63  
+x5 -> 0x44  
+x6 -> 0x2A  
+The following value is expected in memory:  
+Mem[0x400] = 20  
 
-Here are the waveforms: 
+Here are the waveforms:   
 ![Waveforms](Multi_cycle_waveform.png)
